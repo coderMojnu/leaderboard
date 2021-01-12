@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: grey;
+}
+main {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+section {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+}
+.top-player, .course {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+    place-items: center;
+}
+.player, .article {
+    display: flex;
+}
+.player img {
+    height: 50px;
+    margin-right: 20px;
+}
+.top-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+    place-items: center;
+}
+.top-course img {
+    width: 300px;
+}
+.thumbnil {
+    margin-right: 30px;
+}
+.thumbnil img {
+    width: 300px;
+}
+.filled {
+    color: goldenrod;
+}
+.unfilled {
+    color: lightgray;
+}
+@media (max-width: 992px) {
+    .top-player, .course {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top-blog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 668px) {
+    .top-player {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .article {
+        display: block;
+    }
+    .course {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
